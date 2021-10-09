@@ -234,6 +234,39 @@
           }
         ]
       }
+    },
+    {
+      "transform": [
+
+        {
+          "calculate": "'Highest BMI index: ' ",
+          "as": "text_annotation"
+        },
+        { "filter": "datum.Country == 'South Africa'"}
+      ],
+      "mark": {
+        
+        "type": "text",
+        "align": "left",
+        "dy": -115,
+        "dx": -190,
+        "fontSize": 14,
+        "fontStyle": "italic",
+        "color": "teal"
+      },
+      "encoding": {
+        "text": {
+          "field": "text_annotation",
+          "type": "temporal",
+          "condition": {
+            "test": "datum.Country == 'South Africa'",
+            "value": ["There are no countries that have ",
+            "low life expectancy and high salaries",
+          "here around this area"]
+          }
+        }
+        
+      }
     }
   ]
 }
